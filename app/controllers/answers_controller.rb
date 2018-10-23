@@ -25,7 +25,6 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
-    binding.pry
     @answer = Answer.new(answer_params.merge(user_id: User.first.id))
     #@question = Question.find(params[:question_id])
     @answer.question_id = params[:question_id]
