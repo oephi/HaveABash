@@ -27,7 +27,8 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     @question = Question.new(question_params)
-    @question.answer_id = params[answer.id]
+    binding.pry
+    # @question.answer_id = params[answer.id]
 
     respond_to do |format|
       if @question.save
